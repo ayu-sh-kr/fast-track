@@ -1,0 +1,8 @@
+
+.input-element{
+    @apply p-2 w-full bg-slate-50 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-300
+}
+
+.section-element{
+    @apply mt-5 px-2 gap-x-1 flex justify-start items-center w-full
+}

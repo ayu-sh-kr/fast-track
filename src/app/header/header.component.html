@@ -1,0 +1,38 @@
+<div class="w-full bg-yellow-500 p-2 flex justify-between shadow-md">
+  <div class="flex items-center ">
+    <div class="h-10 w-10">
+      <img src="assets/gif/logo/tenor.gif" alt="logo" class="mix-blend-multiply">
+    </div>
+    <div class="text-white text-3xl font-bold">
+      Fastrack
+    </div>
+  </div>
+  <div class="w-2/3 justify-between items-center text-white hidden sm:flex">
+    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Home</a>
+    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Menu</a>
+    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Contact</a>
+    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Services</a>
+  </div>
+  <div class="sm:hidden block cursor-pointer active:scale-95" (click)="hide = !hide">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-white">
+      <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+    </svg>
+  </div>
+</div>
+
+@if(hide){
+    <div class="w-full sm:hidden p-2 block">
+        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
+            <a class="w-full px-3 bg-yellow-300 p-2 text-center text-white font-semibold cursor-pointer">Home</a>
+        </div>
+        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
+            <a class="w-full px-3 bg-yellow-300 text-center p-2 text-white font-semibold cursor-pointer">Menu</a>
+        </div>
+        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
+            <a class="w-full px-3 bg-yellow-300 text-center p-2  text-white font-semibold cursor-pointer">Services</a>
+        </div>
+        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
+            <a class="w-full px-3 bg-yellow-300 text-center p-2  text-white font-semibold cursor-pointer">Contact Us</a>
+        </div>
+    </div>
+}
