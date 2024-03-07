@@ -1,0 +1,11 @@
+.section-element{
+    @apply mt-5 px-2 gap-x-1 flex justify-start items-center w-full
+}
+
+.input-element{
+    @apply p-2 w-full bg-slate-50 focus:outline-none border-b-2 border-[#242ecd]
+}
+
+.input-error {
+    @apply p-2 w-full bg-slate-50 focus:outline-none border-b-2 border-red-500
+}
