@@ -1,0 +1,13 @@
+<div class="p-2 rounded-md bg-white flex sm:justify-end justify-between gap-x-5">
+    <div class="flex items-center gap-x-2 text-center active:outline-green-200">
+        <span class="text-sm font-extralight">Items per page</span>
+        <select class="p-2 w-20 focus:outline-green-200 cursor-pointer rounded-md" (change)="handlePagination($event)">
+            @for(item of pageSize; track $index){
+                <option value="{{item}}" >{{item}}</option>
+            }
+        </select>
+    </div>
+
+    <custom-button text="Prev" [css]="'bg-slate-100 active:scale-95 text-slate-600 shadow-lg'" type="reset"></custom-button>
+    <custom-button text="Next" [css]="'bg-green-200 active:scale-95 text-green-600 shadow-lg'"></custom-button>
+</div>
