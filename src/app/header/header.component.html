@@ -8,10 +8,10 @@
     </div>
   </div>
   <div class="w-2/3 justify-between items-center text-white hidden sm:flex">
-    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Home</a>
-    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Menu</a>
-    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Contact</a>
-    <a class="hover:bg-yellow-300 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Services</a>
+    <a class="hover:bg-lime-500 hover:bg-opacity-60 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Home</a>
+    <a class="hover:bg-lime-500 hover:bg-opacity-60 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Menu</a>
+    <a href="/home#contact" class="hover:bg-lime-500 hover:bg-opacity-60 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Contact</a>
+    <a class="hover:bg-lime-500 hover:bg-opacity-60 px-2 py-1 rounded-md hover:font-semibold cursor-pointer">Services</a>
   </div>
   <div class="sm:hidden block cursor-pointer active:scale-95" (click)="hide = !hide">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-10 h-10 text-white">
@@ -21,18 +21,15 @@
 </div>
 
 @if(hide){
-    <div class="w-full sm:hidden p-2 block">
-        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
-            <a class="w-full px-3 bg-yellow-300 p-2 text-center text-white font-semibold cursor-pointer">Home</a>
-        </div>
-        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
-            <a class="w-full px-3 bg-yellow-300 text-center p-2 text-white font-semibold cursor-pointer">Menu</a>
-        </div>
-        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
-            <a class="w-full px-3 bg-yellow-300 text-center p-2  text-white font-semibold cursor-pointer">Services</a>
-        </div>
-        <div class="w-full flex justify-center items-center my-0.5 shadow-md rounded-md overflow-hidden bg-yellow-300">
-            <a class="w-full px-3 bg-yellow-300 text-center p-2  text-white font-semibold cursor-pointer">Contact Us</a>
+    <div class="w-full h-full fixed top-20 left-0 z-20" (click)="hide = !hide">
+        <div class="w-full sm:hidden p-2 sticky z-30 top-20 flex" (click)="$event.stopImmediatePropagation()">
+            <div class="w-full font-extrabold text-white text-center flex flex-col justify-end">
+                <div *ngFor="let item of navItems; let i = index"
+                     [ngStyle]="{'--delay': i * 0.2 + 's'}"
+                     class="w-2/3 nav-item flex justify-center items-center my-0.5 shadow-md overflow-hidden bg-lime-300">
+                    <a class="w-full px-3 p-2 cursor-pointer active:scale-95">{{item}}</a>
+                </div>
+            </div>
         </div>
     </div>
 }

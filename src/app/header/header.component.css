@@ -1,0 +1,17 @@
+@keyframes fadeIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.nav-item {
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: var(--delay, 0s);
+    opacity: 0;
+    transform: translate(-100%);
+}
