@@ -1,17 +1,20 @@
 import { Component } from '@angular/core';
 import {RouterLink, RouterOutlet} from "@angular/router";
-import {SidebarComponent, SideBarItem} from "../utils/sidebar/sidebar.component";
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
 import {MatButton} from "@angular/material/button";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {NgForOf} from "@angular/common";
+
+interface SideBarItem {
+    name:string,
+    path:string
+}
 
 @Component({
   selector: 'app-product',
   standalone: true,
     imports: [
         RouterOutlet,
-        SidebarComponent,
         MatSidenav,
         MatSidenavContainer,
         MatSidenavContent,
@@ -25,6 +28,7 @@ import {NgForOf} from "@angular/common";
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
+
     opened = false;
 
     sideBarItems:SideBarItem[] = [
