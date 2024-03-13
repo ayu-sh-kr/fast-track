@@ -1,0 +1,14 @@
+<div class="w-full flex-col justify-between gap-y-10">
+
+    <table-subheader (addField)="handleAddClick($event)"></table-subheader>
+
+    <div class="w-full my-5 bg-white rounded-xl p-2 overflow-hidden">
+        <!--        Table-->
+        <table-body [(products)]="paginatedProducts"></table-body>
+
+    </div>
+    <div class="my-5 w-full">
+        <!--        Pagination-->
+        <table-pagination [(size)]="size" (sizeChange)="paginate()"></table-pagination>
+    </div>
+</div>
