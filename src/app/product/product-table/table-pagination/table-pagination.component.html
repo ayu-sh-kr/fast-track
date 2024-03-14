@@ -1,13 +1,21 @@
-<div class="p-2 rounded-md bg-white flex sm:justify-end justify-between gap-x-5">
-    <div class="flex items-center gap-x-2 text-center active:outline-green-200">
-        <span class="text-sm font-extralight">Items per page</span>
-        <select class="p-2 w-20 focus:outline-green-200 cursor-pointer rounded-md" (change)="handlePagination($event)">
-            @for(item of pageSize; track $index){
-                <option value="{{item}}" >{{item}}</option>
-            }
-        </select>
-    </div>
+<div class="p-2 flex justify-between flex-wrap-reverse gap-y-3">
 
-    <custom-button text="Prev" [css]="'bg-slate-100 active:scale-95 text-slate-600 shadow-lg'" type="reset"></custom-button>
-    <custom-button text="Next" [css]="'bg-green-200 active:scale-95 text-green-600 shadow-lg'"></custom-button>
+    <custom-button text="Download" css="active:scale-95 bg-emerald-200 text-emerald-400 bg-opacity-50 hover:bg-opacity-90 rounded-none"></custom-button>
+
+    <div class="flex justify-end gap-x-5 sm:w-fit w-full">
+        <div class="flex items-center gap-x-2 text-center active:outline-green-200">
+            <span class="text-sm font-extralight">Items per page</span>
+            <select class="p-2 w-20 focus:outline-green-200 cursor-pointer rounded-md" (change)="handlePagination($event)">
+                @for(item of pageSize; track $index){
+                    <option value="{{item}}" >{{item}}</option>
+                }
+            </select>
+        </div>
+
+        <custom-button text="Prev" [css]="'border active:scale-95 bg-sky-300 bg-opacity-80 text-sky-800 hover:bg-opacity-90'" (click)="clickPrev()"></custom-button>
+        <div class="text-sm p-2 font-semibold text-green-950 flex items-center justify-center">
+            <span>{{page}}</span>
+        </div>
+        <custom-button text="Next" [css]="'border active:scale-95 bg-cyan-300 bg-opacity-80 text-cyan-800 hover:bg-opacity-90'" (click)="clickNext()"></custom-button>
+    </div>
 </div>
