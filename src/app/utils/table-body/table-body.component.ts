@@ -3,6 +3,7 @@ import {ButtonDeleteComponent} from "../element/button-delete/button-delete.comp
 import {ButtonUpdateComponent} from "../element/button-update/button-update.component";
 import {CellComponent} from "../cell/cell.component";
 import {Category, ProductElement} from "../../product/product-table/product-table.component";
+import {EventService} from "../../service/event.service";
 
 @Component({
   selector: 'table-body',
@@ -22,6 +23,16 @@ export class TableBodyComponent {
         'Producer Phone', 'Weight', 'Category', 'Action'
     ];
 
+    constructor(private eventService:EventService<string>) {
+        this.eventService.getSearchEvent().subscribe(
+            data => {
+                this.filter = data;
+            }
+        )
+    }
+
+    filter!:string;
+
     @Input()
     products!:ProductElement[];
 
@@ -30,10 +41,17 @@ export class TableBodyComponent {
 
     index: number = -1;
 
+    showProducts(){
+
+        if(this.filter && this.filter.trim().length > 0)
+            return this.products.filter(product => product.name.startsWith(this.filter))
+
+        return this.products
+    }
+
     saveChanges($index: number, product: ProductElement) {
         if($index != -1){
             this.products[$index] = product;
-            console.log(product)
             this.index = -1
         }
     }

@@ -1,42 +1,42 @@
-<table class="w-full bg-green-50">
+<table class="w-full bg-lime-50">
     <thead class="w-full">
-    <tr class="border bg-green-100">
-        <th class="p-2 font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[0] }}</th>
-        <th class="p-2 max-md:hidden font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[1] }}</th>
-        <th class="p-2 max-md:hidden font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[2] }}</th>
-        <th class="p-2 max-md:hidden font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[3] }}</th>
-        <th class="p-2 font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[4] }}</th>
-        <th class="p-2 font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[5] }}</th>
-        <th class="p-2 font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[6] }}</th>
-        <th class="p-2 font-semibold text-slate-700 text-left text-sm w-fit">{{ colName[7] }}</th>
+    <tr class="border bg-green-200">
+        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[0] }}</th>
+        <th class="p-2 max-md:hidden font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[1] }}</th>
+        <th class="p-2 max-md:hidden font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[2] }}</th>
+        <th class="p-2 max-md:hidden font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[3] }}</th>
+        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[4] }}</th>
+        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[5] }}</th>
+        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[6] }}</th>
+        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[7] }}</th>
     </tr>
     </thead>
     <tbody>
-        @for (product of products; track $index) {
+        @for (product of showProducts(); track $index) {
             <tr class="text-slate-700 border text-left text-sm w-fit font-light group">
 
-                <td class="w-fit">
+                <td class="w-fit border">
                     <app-cell [(text)]="product.name"></app-cell>
                 </td>
 
-                <td class="w-fit max-md:hidden">
+                <td class="w-fit border max-md:hidden">
                     <app-cell [(text)]="product.producerName"></app-cell>
                 </td>
-                <td class="w-fit max-md:hidden">
+                <td class="w-fit border max-md:hidden">
                     <app-cell [(text)]="product.producerEmail"></app-cell>
                 </td>
-                <td class="w-fit max-md:hidden">
+                <td class="w-fit border max-md:hidden">
                     <app-cell [(text)]="product.producerPhone"></app-cell>
                 </td>
-                <td class="w-fit" >
+                <td class="w-fit border" >
                     <app-cell [(text)]="product.weight"></app-cell>
                 </td>
 
-                <td class="w-fit">
+                <td class="w-fit border">
                     <app-cell [(text)]="product.category"></app-cell>
                 </td>
 
-                <td class="flex justify-around p-2 items-center">
+                <td class="flex justify-around items-center">
                     <button-delete (click)="delete($index, product)"></button-delete>
                     <button-update (click)="saveChanges($index, product)"></button-update>
                 </td>

@@ -1,5 +1,5 @@
-<div class="w-full flex md:justify-start justify-between items-center relative shadow-md bg-green-300">
-    <app-logo [css]="'text-3xl font-semibold px-3 text-white'"></app-logo>
+<div class="w-full flex md:justify-start justify-between items-center relative shadow-md bg-green-300 text-lime-950">
+    <app-logo [css]="'text-3xl font-semibold px-3 text-white cursor-pointer'" (click)="opened = !opened; openNav()"></app-logo>
     <div class="w-fit justify-between text-lg gap-x-5 md:flex hidden mx-5">
         <div [routerLink]="'dashboard'" class="cursor-pointer  px-3 py-2 rounded-md active:scale-95">Dashboard</div>
         <div [routerLink]="'product'" class="cursor-pointer  px-3 py-2 rounded-md active:scale-95">Product</div>

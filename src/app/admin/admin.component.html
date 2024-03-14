@@ -1,6 +1,6 @@
-<div class="w-full bg-slate-50 h-screen">
-    <admin-header></admin-header>
-    <div class="h-[92%]">
+<div class="w-full h-screen">
+    <admin-header (click)="nav = !nav"></admin-header>
+    <div class="h-[92%] bg-green-50">
         <router-outlet></router-outlet>
     </div>
 </div>

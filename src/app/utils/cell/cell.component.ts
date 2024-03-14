@@ -18,7 +18,7 @@ export class CellComponent {
     textChange = new EventEmitter<string>();
 
     @Input()
-    css:string = 'w-full focus:bg-green-200 rounded-md border p-2';
+    css:string = 'w-full focus:border-b-2 border-green-800 focus:bg-lime-100 p-2';
 
     enableDisabled() {
         this.disabled = true

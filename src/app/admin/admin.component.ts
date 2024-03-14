@@ -13,5 +13,5 @@ import {RouterOutlet} from "@angular/router";
   styleUrl: './admin.component.css'
 })
 export class AdminComponent {
-
+    nav: boolean = false;
 }

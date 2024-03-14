@@ -2,13 +2,17 @@
 
     <table-subheader (addField)="handleAddClick($event)"></table-subheader>
 
-    <div class="w-full my-5 bg-white rounded-xl p-2 overflow-hidden">
+    <div class="w-full my-5 bg-white overflow-x-hidden">
         <!--        Table-->
-        <table-body [(products)]="paginatedProducts"></table-body>
+        <table-body [products]="paginatedProducts"></table-body>
 
     </div>
     <div class="my-5 w-full">
         <!--        Pagination-->
-        <table-pagination [(size)]="size" (sizeChange)="paginate()"></table-pagination>
+        <table-pagination
+            [(size)]="size" (sizeChange)="paginate()"
+            [(start)]="start" (startChange)="paginate()"
+            [count]="products.length"
+        ></table-pagination>
     </div>
 </div>

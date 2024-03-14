@@ -83,7 +83,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-05-05')
         },
         {
-            name: 'Product 1',
+            name: 'Product 6',
             description: 'Description 1',
             producerName: 'Producer 1',
             producerEmail: 'producer1@example.com',
@@ -93,7 +93,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-01-01')
         },
         {
-            name: 'Product 2',
+            name: 'Product 7',
             description: 'Description 2',
             producerName: 'Producer 2',
             producerEmail: 'producer2@example.com',
@@ -103,7 +103,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-02-02')
         },
         {
-            name: 'Product 3',
+            name: 'Product 8',
             description: 'Description 3',
             producerName: 'Producer 3',
             producerEmail: 'producer3@example.com',
@@ -113,7 +113,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-03-03')
         },
         {
-            name: 'Product 4',
+            name: 'Product 9',
             description: 'Description 4',
             producerName: 'Producer 4',
             producerEmail: 'producer4@example.com',
@@ -123,7 +123,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-04-04')
         },
         {
-            name: 'Product 5',
+            name: 'Product 10',
             description: 'Description 5',
             producerName: 'Producer 5',
             producerEmail: 'producer5@example.com',
@@ -133,7 +133,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-05-05')
         },
         {
-            name: 'Product 1',
+            name: 'Product 11',
             description: 'Description 1',
             producerName: 'Producer 1',
             producerEmail: 'producer1@example.com',
@@ -143,7 +143,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-01-01')
         },
         {
-            name: 'Product 2',
+            name: 'Product 12',
             description: 'Description 2',
             producerName: 'Producer 2',
             producerEmail: 'producer2@example.com',
@@ -153,7 +153,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-02-02')
         },
         {
-            name: 'Product 3',
+            name: 'Product 13',
             description: 'Description 3',
             producerName: 'Producer 3',
             producerEmail: 'producer3@example.com',
@@ -163,7 +163,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-03-03')
         },
         {
-            name: 'Product 4',
+            name: 'Product 14',
             description: 'Description 4',
             producerName: 'Producer 4',
             producerEmail: 'producer4@example.com',
@@ -173,7 +173,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-04-04')
         },
         {
-            name: 'Product 5',
+            name: 'Product 15',
             description: 'Description 5',
             producerName: 'Producer 5',
             producerEmail: 'producer5@example.com',
@@ -183,7 +183,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-05-05')
         },
         {
-            name: 'Product 1',
+            name: 'Product 16',
             description: 'Description 1',
             producerName: 'Producer 1',
             producerEmail: 'producer1@example.com',
@@ -193,7 +193,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-01-01')
         },
         {
-            name: 'Product 2',
+            name: 'Product 17',
             description: 'Description 2',
             producerName: 'Producer 2',
             producerEmail: 'producer2@example.com',
@@ -203,7 +203,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-02-02')
         },
         {
-            name: 'Product 3',
+            name: 'Product 18',
             description: 'Description 3',
             producerName: 'Producer 3',
             producerEmail: 'producer3@example.com',
@@ -213,7 +213,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-03-03')
         },
         {
-            name: 'Product 4',
+            name: 'Product 19',
             description: 'Description 4',
             producerName: 'Producer 4',
             producerEmail: 'producer4@example.com',
@@ -223,7 +223,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-04-04')
         },
         {
-            name: 'Product 5',
+            name: 'Product 20',
             description: 'Description 5',
             producerName: 'Producer 5',
             producerEmail: 'producer5@example.com',
@@ -233,7 +233,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-05-05')
         },
         {
-            name: 'Product 1',
+            name: 'Product 21',
             description: 'Description 1',
             producerName: 'Producer 1',
             producerEmail: 'producer1@example.com',
@@ -243,7 +243,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-01-01')
         },
         {
-            name: 'Product 2',
+            name: 'Product 22',
             description: 'Description 2',
             producerName: 'Producer 2',
             producerEmail: 'producer2@example.com',
@@ -253,7 +253,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-02-02')
         },
         {
-            name: 'Product 3',
+            name: 'Product 23',
             description: 'Description 3',
             producerName: 'Producer 3',
             producerEmail: 'producer3@example.com',
@@ -263,7 +263,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-03-03')
         },
         {
-            name: 'Product 4',
+            name: 'Product 24',
             description: 'Description 4',
             producerName: 'Producer 4',
             producerEmail: 'producer4@example.com',
@@ -273,7 +273,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-04-04')
         },
         {
-            name: 'Product 5',
+            name: 'Product 25',
             description: 'Description 5',
             producerName: 'Producer 5',
             producerEmail: 'producer5@example.com',
@@ -283,7 +283,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-05-05')
         },
         {
-            name: 'Product 1',
+            name: 'Product 26',
             description: 'Description 1',
             producerName: 'Producer 1',
             producerEmail: 'producer1@example.com',
@@ -293,7 +293,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-01-01')
         },
         {
-            name: 'Product 2',
+            name: 'Product 27',
             description: 'Description 2',
             producerName: 'Producer 2',
             producerEmail: 'producer2@example.com',
@@ -303,7 +303,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-02-02')
         },
         {
-            name: 'Product 3',
+            name: 'Product 28',
             description: 'Description 3',
             producerName: 'Producer 3',
             producerEmail: 'producer3@example.com',
@@ -313,7 +313,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-03-03')
         },
         {
-            name: 'Product 4',
+            name: 'Product 29',
             description: 'Description 4',
             producerName: 'Producer 4',
             producerEmail: 'producer4@example.com',
@@ -323,7 +323,7 @@ export class ProductTableComponent {
             receivingDate: new Date('2022-04-04')
         },
         {
-            name: 'Product 5',
+            name: 'Product 30',
             description: 'Description 5',
             producerName: 'Producer 5',
             producerEmail: 'producer5@example.com',
@@ -340,19 +340,16 @@ export class ProductTableComponent {
 
     start = 0;
 
-    end = this.start + this.size;
 
 
-    paginatedProducts:ProductElement[] = []
+    paginatedProducts:ProductElement[] = this.products.slice(this.start, this.start + this.size);
 
     handleAddClick(product: ProductElement) {
-        this.products.push(product);
+        this.paginatedProducts.push(product);
     }
 
     paginate(){
-        console.log(this.size)
-        console.log(this.paginatedProducts.length)
-        this.paginatedProducts = this.products.slice(this.start, this.end);
+        this.paginatedProducts = this.products.slice(this.start, this.start + this.size);
     }
 
     handleSizeChange(size: number) {
