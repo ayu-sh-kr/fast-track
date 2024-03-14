@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {MatSidenav, MatSidenavContainer, MatSidenavContent} from "@angular/material/sidenav";
 import {MatButton} from "@angular/material/button";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {NgForOf} from "@angular/common";
+import {EventService} from "../service/event.service";
 
 interface SideBarItem {
     name:string,
@@ -29,7 +30,11 @@ interface SideBarItem {
 })
 export class ProductComponent {
 
+    @Input()
     opened = false;
+
+    @Output()
+    openedChange = new EventEmitter<boolean>()
 
     sideBarItems:SideBarItem[] = [
         {
@@ -52,4 +57,8 @@ export class ProductComponent {
             path: 'upload'
         }
     ]
+
+    constructor(private eventService: EventService<boolean>) {
+        this.eventService.getEvent().subscribe(data => this.opened = data);
+    }
 }
