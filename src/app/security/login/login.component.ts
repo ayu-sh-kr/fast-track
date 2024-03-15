@@ -1,6 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {LogoComponent} from "../utils/logo/logo.component";
+import {LogoComponent} from "../../utils/logo/logo.component";
 
 @Component({
     selector: 'app-login',

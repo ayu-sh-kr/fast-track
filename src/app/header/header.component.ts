@@ -1,4 +1,4 @@
-import {AfterViewInit, Component, ElementRef, QueryList, Renderer2, ViewChild} from '@angular/core';
+import {Component, Renderer2} from '@angular/core';
 import {LowerCasePipe, NgForOf, NgStyle} from "@angular/common";
 import {RouterLink} from "@angular/router";
 import {ReplacePipe} from "../utils/replace.pipe";
@@ -18,10 +18,30 @@ import {ReplacePipe} from "../utils/replace.pipe";
 })
 export class HeaderComponent {
 
-    hide = false;
+    hide = true;
 
 
-    navItems = ['Home', 'Menu', 'Services', 'Contact Us'];
+    navItems = [
+        {
+            name: 'Home',
+            identity: '/home'
+        },
+
+        {
+            name: 'Menu',
+            identity: '/home'
+        },
+
+        {
+            name: 'Services',
+            identity: '/home'
+        },
+
+        {
+            name: 'Contact Us',
+            identity: '/home#contact'
+        }
+    ];
 
     constructor(private renderer: Renderer2) {
     }
@@ -30,5 +50,22 @@ export class HeaderComponent {
     setHide() {
         this.hide = !this.hide;
         console.log(this.hide)
+    }
+
+    handleAnimation() {
+        if(this.hide){
+            for(let i = 0; i < 4; i++){
+                let element = document.getElementById('div' + i) as HTMLDivElement;
+                element.classList.remove('nav-item')
+                element.classList.add('nav-item-out')
+            }
+        }
+        else{
+            for(let i = 0; i < 4; i++){
+                let element = document.getElementById('div' + i) as HTMLDivElement;
+                element.classList.remove('nav-item-out')
+                element.classList.add('nav-item')
+            }
+        }
     }
 }

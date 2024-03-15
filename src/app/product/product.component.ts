@@ -5,6 +5,7 @@ import {MatButton} from "@angular/material/button";
 import {MatListItem, MatNavList} from "@angular/material/list";
 import {NgForOf} from "@angular/common";
 import {EventService} from "../service/event.service";
+import {MainContentComponent} from "../utils/main-content/main-content.component";
 
 interface SideBarItem {
     name:string,
@@ -23,7 +24,8 @@ interface SideBarItem {
         MatNavList,
         RouterLink,
         MatListItem,
-        NgForOf
+        NgForOf,
+        MainContentComponent
     ],
   templateUrl: './product.component.html',
   styleUrl: './product.component.css'

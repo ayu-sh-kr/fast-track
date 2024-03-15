@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
-import {LoginComponent} from "./login/login.component";
-import {RegisterComponent} from "./register/register.component";
+import {LoginComponent} from "./security/login/login.component";
+import {RegisterComponent} from "./security/register/register.component";
 import {AppComponent} from "./app.component";
 import {HomeComponent} from "./home/home.component";
 import {AdminComponent} from "./admin/admin.component";
@@ -9,11 +9,12 @@ import {ProductFormComponent} from "./product/product-form/product-form.componen
 import {ProductTableComponent} from "./product/product-table/product-table.component";
 import {ProductUploadComponent} from "./product/product-upload/product-upload.component";
 import {ProductDownloadComponent} from "./product/product-download/product-download.component";
+import {ShipmentComponent} from "./shipment/shipment.component";
 
 export const routes: Routes = [
     {
         path: '',
-        component: AppComponent
+        component: HomeComponent
     },
 
     {
@@ -58,6 +59,14 @@ export const routes: Routes = [
                         path: 'download',
                         component: ProductDownloadComponent
                     }
+                ]
+            },
+
+            {
+                path: 'shipment',
+                component: ShipmentComponent,
+                children: [
+
                 ]
             }
         ]

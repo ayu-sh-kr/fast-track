@@ -1,7 +1,6 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {SelectOptionsComponent} from "../../../utils/element/select-options/select-options.component";
 import {CustomButtonComponent} from "../../../utils/element/custom-button/custom-button.component";
-import {count} from "rxjs";
 
 @Component({
   selector: 'table-pagination',
@@ -38,8 +37,8 @@ export class TablePaginationComponent{
 
     handlePagination(event: Event) {
         let option = event.target as HTMLOptionElement
-        let value = <number> <unknown> option.value
-        this.sizeChange.emit(value)
+        let value:number = <number> <unknown> option.value
+        this.sizeChange.emit(Number(value))
     }
 
     clickNext(){
@@ -48,20 +47,20 @@ export class TablePaginationComponent{
             this.startChange.emit(this.start)
             this.page = (this.start / this.size) + 1
         }
-        console.log(`size: ${this.size} page: ${this.page}  start: ${this.start}`)
     }
 
     clickPrev(){
         if(!(this.start == 0) && this.size < this.start){
             this.start -= this.size;
             this.startChange.emit(this.start);
+            this.sizeChange.emit(this.size)
             this.page = (this.start / this.size) + 1
         }
         else{
             this.start = 0;
             this.startChange.emit(this.start);
+            this.sizeChange.emit(this.size)
             this.page = (this.start / this.size) + 1
         }
-        console.log(`size: ${this.size} page: ${this.page}  start: ${this.start}`)
     }
 }

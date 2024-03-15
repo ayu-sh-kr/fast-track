@@ -1,42 +1,96 @@
-<section class="p-10 w-full h-[85vh] bg-white shadow-md m-2">
-    <div class="text-3xl font-semibold text-lime-500">
-        Product Details
+<section class="p-10 max-w-7xl mx-auto m-2 bg-white rounded-md">
+    <div>
+        <span class="bg-gradient-to-r from-green-500 to-green-300 hover:opacity-80 transition-opacity duration-200
+        text-zinc-800 text-2xl px-3 rounded-md py-2 flex items-center w-fit gap-x-2 cursor-pointer">Add Product
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                 stroke="currentColor"
+                 class="w-6 h-6 text-white">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+            </svg>
+        </span>
     </div>
-    <div class="flex items-center justify-around w-full h-full">
-        <div class="p-2 w-full">
-            <div>
-                <input type="text" placeholder="Enter the product name" class="input-element">
+
+    <div class="flex items-center md:justify-around flex-wrap w-full h-full m-10">
+        <div class="p-2 w-full sm:w-1/2">
+            <div class="text-xl font-semibold text-zinc-800 flex gap-x-3 items-center">
+                <span
+                    class="rounded-full overflow-hidden bg-black text-center h-10 w-10 flex items-center justify-center font-semibold py-1">
+                    <h1 class="w-full h-full text-center text-white">1.</h1>
+                </span>
+                <span>Product Details</span>
+            </div>
+            <div class="my-5">
+                <div class="label-element">Product Name</div>
+                <input type="text" placeholder="Enter the product name" class="input-element"
+                       [formControl]="productName">
             </div>
 
-            <div>
-                <input type="text" placeholder="Enter the customer name" class="input-element">
+            <div class="my-5">
+                <div class="label-element">Product Weight</div>
+                <input type="text" placeholder="Enter the product weight" class="input-element"
+                       [formControl]="productWeight">
             </div>
 
-            <div>
-                <input type="text" placeholder="Enter the customer email" class="input-element">
+            <div class="my-5">
+                <div class="label-element">Product Category</div>
+                <select name="category" id="category" [formControl]="productCategory" class="input-element">
+                    <option value="LIGHT">Light</option>
+                    <option value="HEAVY">Heavy</option>
+                    <option value="METAL">Metal</option>
+                </select>
             </div>
 
-            <div>
-                <input type="text" placeholder="Enter the customer phone" class="input-element">
+            <div class="my-5">
+                <div class="label-element">Receive Date</div>
+                <input type="date" placeholder="Enter the receiving date" class="input-element"
+                       [formControl]="receivingDate">
             </div>
+
         </div>
-        <div class="p-2 w-full">
-            <div>
-                <input type="text" placeholder="Enter the product category" class="input-element">
+
+        <div class="p-2 w-full sm:w-1/2">
+
+            <div class="text-xl font-semibold text-zinc-800 flex gap-x-3 items-center">
+                <span
+                    class="rounded-full overflow-hidden bg-black text-center h-10 w-10 flex items-center justify-center font-semibold py-1">
+                    <h1 class="w-full h-full text-center text-white">2.</h1>
+                </span>
+                <span>Customer Details</span>
             </div>
 
-            <div>
-                <input type="text" placeholder="Enter the product weight" class="input-element">
+            <div class="my-5">
+                <div class="label-element">Customer Name</div>
+                <input type="text" placeholder="Enter the Customer name" class="input-element"
+                       [formControl]="producerName">
+
+                <div class="my-5">
+                    <div class="label-element">Customer Phone</div>
+                    <input type="text" placeholder="Enter the Customer phone" class="input-element"
+                           [formControl]="producerPhone">
+                </div>
+
+                <div class="my-5">
+                    <div class="label-element">Customer Email</div>
+                    <input type="email" placeholder="Enter the Customer email" class="input-element"
+                           [formControl]="producerEmail">
+                </div>
+
+                <div class="my-5">
+                    <div class="label-element">Product Description</div>
+                    <input type="text" placeholder="Enter the product description" class="input-element"
+                           [formControl]="productDescription">
+                </div>
+
             </div>
 
-            <div>
-                <input type="date" placeholder="Enter the receiving date" class="input-element">
-            </div>
-
-            <div>
-                <input type="text" placeholder="Enter the product description" class="input-element">
-            </div>
         </div>
+    </div>
+    <div class="p-2 w-full justify-end flex px-20">
+        <custom-button (click)="addProduct()"
+                       [css]="'bg-gradient-to-r from-blue-400 to-blue-200 text-blue-600 px-10 hover:bg-opacity-80 px-8'"
+                       text="Save"
+        >
+        </custom-button>
     </div>
 
 </section>

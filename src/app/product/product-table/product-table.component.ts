@@ -5,7 +5,7 @@ import {ButtonDeleteComponent} from "../../utils/element/button-delete/button-de
 import {ButtonUpdateComponent} from "../../utils/element/button-update/button-update.component";
 import {TableSubheaderComponent} from "./table-subheader/table-subheader.component";
 import {TablePaginationComponent} from "./table-pagination/table-pagination.component";
-import {TableBodyComponent} from "../../utils/table-body/table-body.component";
+import {TableBodyComponent} from "./table-body/table-body.component";
 
 
 
@@ -338,7 +338,7 @@ export class ProductTableComponent {
 
     size: number = 10;
 
-    start = 0;
+    start:number = 0;
 
 
 
@@ -349,6 +349,7 @@ export class ProductTableComponent {
     }
 
     paginate(){
+        console.log(`size: ${this.size}  start: ${this.start} start + size: ${this.start + this.size}`)
         this.paginatedProducts = this.products.slice(this.start, this.start + this.size);
     }
 

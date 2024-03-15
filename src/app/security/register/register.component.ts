@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {RouterLink} from "@angular/router";
-import {LogoComponent} from "../utils/logo/logo.component";
+import {LogoComponent} from "../../utils/logo/logo.component";
 import {FormsModule} from "@angular/forms";
 import {NgClass} from "@angular/common";
-import {FieldComponent} from "../utils/field/field.component";
+import {FieldComponent} from "../../utils/field/field.component";
 
 @Component({
   selector: 'app-register',

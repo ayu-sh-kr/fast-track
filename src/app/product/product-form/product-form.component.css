@@ -1,9 +1,14 @@
 
 .input-element {
-    @apply focus:outline-none border-b-lime-400 border-b-2 p-2 my-5 w-[320px] text-zinc-800 placeholder:text-zinc-800 bg-lime-50 w-2/3
+    @apply focus:outline-none border-b-green-400 border-b-2 p-2 bg-gray-100 block
+     w-[320px] text-zinc-800 placeholder:text-zinc-600 focus:bg-green-50 sm:w-2/3 placeholder:text-sm
 }
 
 
 .div-element {
     @apply bg-lime-200 p-2 rounded-md my-5 shadow-md shadow-lime-400
+}
+
+.label-element{
+    @apply text-zinc-800 text-lg
 }
