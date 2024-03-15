@@ -1,0 +1,12 @@
+
+mat-sidenav-container{
+    @apply flex justify-between bg-gray-50 w-full h-[90vh] relative
+}
+
+mat-sidenav-content {
+    @apply p-2 w-full
+}
+
+mat-sidenav{
+    @apply sm:w-3/12 w-2/3 p-2 text-xl
+}

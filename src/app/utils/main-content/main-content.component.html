@@ -1,1 +1,15 @@
-<p>main-content works!</p>
+<mat-sidenav-container>
+    <mat-sidenav [(opened)]="opened" mode="side">
+        <mat-nav-list>Product Menu</mat-nav-list>
+        <mat-nav-list>
+            @for(item of sideBarItems; track $index){
+                <a mat-list-item  [routerLink]="item.path">{{ item.name }}</a>
+            }
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div>
+            <router-outlet></router-outlet>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
