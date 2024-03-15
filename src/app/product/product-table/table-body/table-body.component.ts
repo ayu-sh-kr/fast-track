@@ -1,9 +1,9 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {ButtonDeleteComponent} from "../element/button-delete/button-delete.component";
-import {ButtonUpdateComponent} from "../element/button-update/button-update.component";
-import {CellComponent} from "../cell/cell.component";
-import {Category, ProductElement} from "../../product/product-table/product-table.component";
-import {EventService} from "../../service/event.service";
+import {ButtonDeleteComponent} from "../../../utils/element/button-delete/button-delete.component";
+import {ButtonUpdateComponent} from "../../../utils/element/button-update/button-update.component";
+import {CellComponent} from "../../../utils/cell/cell.component";
+import {Category, ProductElement} from "../product-table.component";
+import {EventService} from "../../../service/event.service";
 
 @Component({
   selector: 'table-body',
