@@ -34,7 +34,7 @@ export class TablePaginationComponent{
     @Output()
     startChange = new EventEmitter<number>()
 
-    page: number = 0;
+    page: number = 1;
 
     handlePagination(event: Event) {
         let option = event.target as HTMLOptionElement
@@ -46,7 +46,7 @@ export class TablePaginationComponent{
         if(! ((this.start + this.size) >= this.count)){
             this.start += Number(this.size);
             this.startChange.emit(this.start)
-            this.page = this.start / 10
+            this.page = (this.start / this.size) + 1
         }
         console.log(`size: ${this.size} page: ${this.page}  start: ${this.start}`)
     }
@@ -55,12 +55,12 @@ export class TablePaginationComponent{
         if(!(this.start == 0) && this.size < this.start){
             this.start -= this.size;
             this.startChange.emit(this.start);
-            this.page = this.start / 10
+            this.page = (this.start / this.size) + 1
         }
         else{
             this.start = 0;
             this.startChange.emit(this.start);
-            this.page = this.start / 10
+            this.page = (this.start / this.size) + 1
         }
         console.log(`size: ${this.size} page: ${this.page}  start: ${this.start}`)
     }
