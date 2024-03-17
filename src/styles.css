@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
 @import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "@danielmoncada/angular-datetime-picker/assets/style/picker.min.css";
 
 @tailwind base;
 @tailwind components;
@@ -13,6 +14,18 @@
     @apply bg-[#c5fd02] px-3 py-2 text-white font-bold rounded-md mt-5 active:scale-95
 }
 
+
+.center-component {
+    @apply max-w-7xl mx-auto bg-white shadow-md px-3 py-2 mt-5
+}
+
+.input-base {
+    @apply  border-b-2 focus:outline-none focus:border-green-950 p-2 placeholder:text-sm text-zinc-800 block mt-2 bg-slate-100 placeholder-transparent
+}
+
+.button-basic {
+    @apply px-5 py-2 text-white rounded-md active:scale-95 shadow-md
+}
 
 
 

@@ -1,12 +1,10 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {SelectOptionsComponent} from "../../../utils/element/select-options/select-options.component";
 import {CustomButtonComponent} from "../../../utils/element/custom-button/custom-button.component";
 
 @Component({
   selector: 'table-pagination',
   standalone: true,
     imports: [
-        SelectOptionsComponent,
         CustomButtonComponent
 
     ],

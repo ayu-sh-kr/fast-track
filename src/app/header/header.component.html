@@ -24,7 +24,7 @@
 
 }
 
-<div class="w-full h-full fixed top-20 left-0 z-20" (click)="hide = !hide; handleAnimation()">
+<div class="w-full fixed top-20 left-0 z-20" (click)="hide = !hide;">
     <div class="w-full sm:hidden p-2 sticky z-30 top-20 flex" (click)="$event.stopImmediatePropagation()">
         <div class="w-full font-extrabold text-white text-center flex flex-col justify-end">
             <div *ngFor="let item of navItems; let i = index"

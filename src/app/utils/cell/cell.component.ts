@@ -30,4 +30,5 @@ export class CellComponent {
         this.textChange.emit(element.innerText);
         this.text = element.innerText;
     }
+
 }
