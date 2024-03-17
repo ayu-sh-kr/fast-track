@@ -1,0 +1,143 @@
+<div class="center-component">
+
+    <div class="text-3xl my-5">
+        Origin Address
+    </div>
+
+    <div class="address-section">
+
+        <input-element
+            placeholder="Enter the street name"
+            label="Street"
+            class="focus:bg-lime-200 w-[380px]" [(data)]="origin.street"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter Address Line 1"
+            label="Address Line 1"
+            class="focus:bg-lime-200 w-[380px] mt-0" [(data)]="origin.addressLine1"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter Address Line 2"
+            label="Address Line 2"
+            class="focus:bg-lime-200 w-[380px] mt-0" [(data)]="origin.addressLine2"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter City"
+            label="City"
+            class="focus:bg-lime-200 w-[380px]" [(data)]="origin.city"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter State anme"
+            label="State"
+            class="focus:bg-lime-200 w-[380px]" [(data)]="origin.state"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter Zipcode"
+            label="Zipcode"
+            type="number"
+            class="focus:bg-lime-200 w-[380px]"  [(data)]="origin.zipcode"
+        ></input-element>
+
+    </div>
+
+    <div class="text-3xl my-5">
+        Destination Address
+    </div>
+
+    <div class="address-section">
+
+        <input-element
+            placeholder="Enter the street name"
+            label="Street"
+            class="focus:bg-lime-200 w-[380px]"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter Address Line 1"
+            label="Address Line 1"
+            class="focus:bg-lime-200 w-[380px] mt-0"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter Address Line 2"
+            label="Address Line 2"
+            class="focus:bg-lime-200 w-[380px] mt-0"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter City"
+            label="City"
+            class="focus:bg-lime-200 w-[380px]"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter State anme"
+            label="State"
+            class="focus:bg-lime-200 w-[380px]"
+        ></input-element>
+
+        <input-element
+            placeholder="Enter Zipcode"
+            label="Zipcode"
+            type="number"
+            class="focus:bg-lime-200 w-[380px]"
+        ></input-element>
+
+    </div>
+
+    <div class="text-3xl my-5">
+        Shipment Status
+    </div>
+
+    <div class="p-2 mx-4">
+        <mat-form-field appearance="fill">
+            <mat-label class="text-green-950">Shipment Status</mat-label>
+            <mat-select class="border-green-950">
+                @for(option of options; track $index){
+                    <mat-option [value]="option">{{option}}</mat-option>
+                }
+            </mat-select>
+        </mat-form-field>
+    </div>
+
+    <div class="text-3xl">
+        Shipment Timings
+    </div>
+
+    <div class="address-section">
+       <div class="relative my-5">
+           <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date"
+                  class="peer input-base focus:bg-lime-200 w-[380px]"
+           >
+           <owl-date-time #dt1></owl-date-time>
+           <label class="text-zinc-600 absolute left-2 -top-3.5
+                peer-focus:-top-2.5 peer-placeholder-shown:text-base transition-all
+                peer-focus:text-sm peer-placeholder-shown:top-3.5 peer-focus:text-green-950"
+            >Dispatch Date
+           </label>
+       </div>
+
+        <div class="relative my-5">
+            <input [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="Date"
+                   class="peer input-base focus:bg-lime-200 w-[380px]"
+            >
+            <owl-date-time #dt2></owl-date-time>
+            <label class="text-zinc-600 absolute left-2 -top-3.5
+                peer-focus:-top-2.5 peer-placeholder-shown:text-base transition-all
+                peer-focus:text-sm peer-placeholder-shown:top-3.5 peer-focus:text-green-950"
+            >Delivered Date
+            </label>
+        </div>
+    </div>
+
+
+    <div class="w-full p-2 flex justify-end gap-x-5">
+        <button class="button-basic bg-gradient-to-r from-red-400 to-red-700" (click)="clearFields()">Clear</button>
+        <button class="button-basic bg-gradient-to-r from-emerald-400 to-emerald-700" (click)="onSubmit()">Submit</button>
+    </div>
+</div>

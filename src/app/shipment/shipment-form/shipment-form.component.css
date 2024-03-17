@@ -1,0 +1,3 @@
+.address-section{
+    @apply w-full flex items-center p-2 md:justify-around justify-center flex-wrap
+}
