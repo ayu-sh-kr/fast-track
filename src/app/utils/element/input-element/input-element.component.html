@@ -1,0 +1,23 @@
+<div class="mt-5 relative flex">
+
+    <input
+        [type]="type"
+        [placeholder]="placeholder"
+        [class]="'peer input-base ' + class"
+        autocomplete="false"
+        (keyup)="updateData($event)"
+        [value]="data ? data : ''"
+    >
+
+    <div class="absolute right-0 top-1.5">
+        <ng-content></ng-content>
+    </div>
+
+    <label class="text-zinc-600 absolute left-2 -top-3.5
+        peer-focus:-top-2.5 peer-placeholder-shown:text-base transition-all
+        peer-focus:text-sm peer-placeholder-shown:top-3.5 peer-focus:text-green-950"
+    >
+        {{label}}
+    </label>
+
+</div>
