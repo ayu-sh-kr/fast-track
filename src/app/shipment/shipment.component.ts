@@ -16,7 +16,7 @@ export class ShipmentComponent {
     sideBarItems:NavItems[] = [
         {
             name: 'Shipment Form',
-            path: 'form'
+            path: '/admin/shipment'
         },
 
         {

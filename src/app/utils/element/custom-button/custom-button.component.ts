@@ -10,7 +10,7 @@ import {Component, Input} from '@angular/core';
 export class CustomButtonComponent {
 
     @Input()
-    css!:string;
+    class!:string;
 
     @Input()
     type!:string
