@@ -7,40 +7,40 @@
     <div class="address-section">
 
         <input-element
-            placeholder="Enter the street name"
-            label="Street"
-            class="focus:bg-lime-200 w-[380px]" [(data)]="origin.street"
+            placeholder="Stret Name"
+            label="Street Name"
+            class="focus:bg-green-50 w-[380px]" [(data)]="origin.street"
         ></input-element>
 
         <input-element
-            placeholder="Enter Address Line 1"
+            placeholder="Address Line 1"
             label="Address Line 1"
-            class="focus:bg-lime-200 w-[380px] mt-0" [(data)]="origin.addressLine1"
+            class="focus:bg-green-50 w-[380px] mt-0" [(data)]="origin.addressLine1"
         ></input-element>
 
         <input-element
-            placeholder="Enter Address Line 2"
+            placeholder="Address Line 2"
             label="Address Line 2"
-            class="focus:bg-lime-200 w-[380px] mt-0" [(data)]="origin.addressLine2"
+            class="focus:bg-green-50 w-[380px] mt-0" [(data)]="origin.addressLine2"
         ></input-element>
 
         <input-element
-            placeholder="Enter City"
+            placeholder="City"
             label="City"
-            class="focus:bg-lime-200 w-[380px]" [(data)]="origin.city"
+            class="focus:bg-green-50 w-[380px]" [(data)]="origin.city"
         ></input-element>
 
         <input-element
-            placeholder="Enter State anme"
+            placeholder="State anme"
             label="State"
-            class="focus:bg-lime-200 w-[380px]" [(data)]="origin.state"
+            class="focus:bg-green-50 w-[380px]" [(data)]="origin.state"
         ></input-element>
 
         <input-element
-            placeholder="Enter Zipcode"
+            placeholder="Zipcode"
             label="Zipcode"
             type="number"
-            class="focus:bg-lime-200 w-[380px]"  [(data)]="origin.zipcode"
+            class="focus:bg-green-50 w-[380px]"  [(data)]="origin.zipcode"
         ></input-element>
 
     </div>
@@ -52,40 +52,46 @@
     <div class="address-section">
 
         <input-element
-            placeholder="Enter the street name"
-            label="Street"
-            class="focus:bg-lime-200 w-[380px]"
+            placeholder="Street name"
+            label="Street Name"
+            class="focus:bg-green-50 w-[380px]"
+            [(data)]="destination.street"
         ></input-element>
 
         <input-element
-            placeholder="Enter Address Line 1"
+            placeholder="Address Line 1"
             label="Address Line 1"
-            class="focus:bg-lime-200 w-[380px] mt-0"
+            class="focus:bg-green-50 w-[380px] mt-0"
+            [(data)]="destination.addressLine1"
         ></input-element>
 
         <input-element
-            placeholder="Enter Address Line 2"
+            placeholder="Address Line 2"
             label="Address Line 2"
-            class="focus:bg-lime-200 w-[380px] mt-0"
+            class="focus:bg-green-50 w-[380px] mt-0"
+            [(data)]="destination.addressLine2"
         ></input-element>
 
         <input-element
-            placeholder="Enter City"
+            placeholder="City"
             label="City"
-            class="focus:bg-lime-200 w-[380px]"
+            class="focus:bg-green-50 w-[380px]"
+            [(data)]="destination.city"
         ></input-element>
 
         <input-element
-            placeholder="Enter State anme"
+            placeholder="State name"
             label="State"
-            class="focus:bg-lime-200 w-[380px]"
+            class="focus:bg-green-50 w-[380px]"
+            [(data)]="destination.state"
         ></input-element>
 
         <input-element
-            placeholder="Enter Zipcode"
+            placeholder="Zipcode"
             label="Zipcode"
             type="number"
-            class="focus:bg-lime-200 w-[380px]"
+            class="focus:bg-green-50 w-[380px]"
+            [(data)]="destination.zipcode"
         ></input-element>
 
     </div>
@@ -112,7 +118,7 @@
     <div class="address-section">
        <div class="relative my-5">
            <input [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Date"
-                  class="peer input-base focus:bg-lime-200 w-[380px]"
+                  class="peer input-base focus:bg-green-50 w-[380px]"
            >
            <owl-date-time #dt1></owl-date-time>
            <label class="text-zinc-600 absolute left-2 -top-3.5
@@ -124,7 +130,7 @@
 
         <div class="relative my-5">
             <input [owlDateTime]="dt2" [owlDateTimeTrigger]="dt2" placeholder="Date"
-                   class="peer input-base focus:bg-lime-200 w-[380px]"
+                   class="peer input-base focus:bg-green-50 w-[380px]"
             >
             <owl-date-time #dt2></owl-date-time>
             <label class="text-zinc-600 absolute left-2 -top-3.5

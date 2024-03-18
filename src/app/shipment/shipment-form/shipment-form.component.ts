@@ -42,6 +42,16 @@ export class ShipmentFormComponent {
         addressLine2: ''
     }
 
+    destination: Address = {
+        country: '',
+        state: '',
+        city: '',
+        zipcode: Number(''),
+        street: '',
+        addressLine1: '',
+        addressLine2: ''
+    }
+
     clearFields() {
         console.log('clearing...')
         console.log(this.origin)

@@ -11,6 +11,7 @@ import {ProductUploadComponent} from "./product/product-upload/product-upload.co
 import {ProductDownloadComponent} from "./product/product-download/product-download.component";
 import {ShipmentComponent} from "./shipment/shipment.component";
 import {ShipmentFormComponent} from "./shipment/shipment-form/shipment-form.component";
+import {ShipmentTableComponent} from "./shipment-table/shipment-table.component";
 
 export const routes: Routes = [
     {
@@ -70,6 +71,11 @@ export const routes: Routes = [
                     {
                         path: '',
                         component: ShipmentFormComponent
+                    },
+
+                    {
+                        path: 'table',
+                        component: ShipmentTableComponent
                     }
                 ]
             }
