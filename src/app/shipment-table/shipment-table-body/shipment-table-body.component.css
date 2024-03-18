@@ -1,0 +1,7 @@
+.header-row{
+    @apply text-left border border-slate-300 text-slate-700 px-3
+}
+
+.body-row {
+    @apply bg-green-50 border border-slate-300 text-slate-600 text-sm
+}
