@@ -12,21 +12,11 @@ declare interface Address {
 declare interface Shipment {
     shipmentId:string
     origin:string
-    shipmentStatus:string
+    shipmentStatus:ShipmentStatus
     destination:string
     productId:string
-    dispatchDate:Date
-    deliveryTime:Date
-}
-
-declare enum ShipmentStatus{
-    DELIVERED = 'Delivered',
-    PROCESSING = 'Processing',
-    DISPATCHED = 'Dispatched',
-    IN_TRANSITS = 'In-transits',
-    NEARBY = 'Nearby',
-    ARRIVED = 'Arrived',
-    DISPATCHING = 'Dispatching'
+    dispatchDate:number
+    deliveryTime:number
 }
 
 
@@ -34,3 +24,4 @@ declare interface NavItems {
     name:string,
     path:string
 }
+

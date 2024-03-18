@@ -1,7 +1,7 @@
 <div class="flex justify-center items-center cursor-pointer">
     <div class="w-full">
         <h1 (click)="enableDisabled()" [contentEditable]="disabled" (keydown.enter)="disableEditable($event)"
-               [class]="css + ' min-w-fit focus:outline-none'" [innerText]="text"
+               [class]="class + ' min-w-fit focus:outline-none'" [innerText]="text"
         ></h1>
     </div>
 </div>
