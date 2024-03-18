@@ -1,7 +1,7 @@
 
 .input-element {
     @apply focus:outline-none border-b-green-400 border-b-2 p-2 bg-gray-100 block
-     w-[320px] text-zinc-800 placeholder:text-zinc-600 focus:bg-green-50 sm:w-2/3 placeholder:text-sm
+     w-[320px] text-zinc-800 placeholder:text-zinc-600 focus:bg-green-50 sm:w-2/3 placeholder:text-sm focus:placeholder-transparent
 }
 
 

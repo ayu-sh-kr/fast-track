@@ -1,19 +1,19 @@
-<table class="w-full bg-lime-50">
+<table class="w-full">
     <thead class="w-full">
     <tr class="border bg-green-200">
-        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[0] }}</th>
-        <th class="p-2 max-md:hidden font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[1] }}</th>
-        <th class="p-2 max-md:hidden font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[2] }}</th>
-        <th class="p-2 max-md:hidden font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[3] }}</th>
-        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[4] }}</th>
-        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[5] }}</th>
-        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[6] }}</th>
-        <th class="p-2 font-semibold text-lime-950 text-left text-sm w-fit">{{ colName[7] }}</th>
+        <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[0] }}</th>
+        <th class="p-2 max-md:hidden font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[1] }}</th>
+        <th class="p-2 max-md:hidden font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[2] }}</th>
+        <th class="p-2 max-md:hidden font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[3] }}</th>
+        <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[4] }}</th>
+        <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[5] }}</th>
+        <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[6] }}</th>
+        <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[7] }}</th>
     </tr>
     </thead>
     <tbody>
         @for (product of showProducts(); track $index) {
-            <tr class="text-slate-700 border text-left text-sm w-fit font-light group">
+            <tr class="text-slate-700 border text-left text-sm w-fit font-light group bg-green-50">
 
                 <td class="w-fit border">
                     <app-cell [(text)]="product.name"></app-cell>
