@@ -1,41 +1,43 @@
 <table class="w-full">
     <thead>
-        <tr class="bg-green-300">
-            @for(column of columns; track $index){
-                <td class="header-row">{{column}}</td>
-            }
-            <td class="header-row">Action</td>
-        </tr>
+    <tr class="bg-green-300">
+        @for (column of columns; track $index) {
+            <td class="header-row p-2">{{ column }}</td>
+        }
+        <td class="header-row p-2">Action</td>
+    </tr>
     </thead>
     <tbody>
-        @for (shipment of shipments; track $index){
-            <td class="body-row">
-                <app-cell [(text)]="shipment.shipmentId"></app-cell>
-            </td>
-            <td class="body-row">
-                <app-cell [(text)]="shipment.shipmentStatus"></app-cell>
-            </td>
-            <td class="body-row">
-                <app-cell [(text)]="shipment.productId"></app-cell>
-            </td>
-            <td class="body-row">
-                <app-cell [(text)]="shipment.dispatchDate" [date]="true"></app-cell>
-            </td>
-            <td class="body-row">
-                <app-cell [(text)]="shipment.deliveryTime" [date]="true"></app-cell>
-            </td>
-            <td class="body-row">
-                <app-cell [(text)]="shipment.origin"></app-cell>
-            </td>
-            <td class="body-row">
-                <app-cell [(text)]="shipment.destination"></app-cell>
-            </td>
-            <td class="body-row">
-                <div class="flex justify-around">
-                    <button-delete (click)="remove(shipment)"></button-delete>
-                    <button-update></button-update>
-                </div>
-            </td>
+        @for (shipment of shipments; track $index) {
+            <tr>
+                <td class="body-row">
+                    <app-cell [(text)]="shipment.shipmentId"></app-cell>
+                </td>
+                <td class="body-row">
+                    <app-cell [(text)]="shipment.shipmentStatus"></app-cell>
+                </td>
+                <td class="body-row">
+                    <app-cell [(text)]="shipment.productId"></app-cell>
+                </td>
+                <td class="body-row">
+                    <app-cell [(text)]="shipment.dispatchDate" [date]="true"></app-cell>
+                </td>
+                <td class="body-row">
+                    <app-cell [(text)]="shipment.deliveryTime" [date]="true"></app-cell>
+                </td>
+                <td class="body-row">
+                    <app-cell [(text)]="shipment.origin"></app-cell>
+                </td>
+                <td class="body-row">
+                    <app-cell [(text)]="shipment.destination"></app-cell>
+                </td>
+                <td class="body-row">
+                    <div class="flex justify-around">
+                        <button-delete (click)="remove(shipment)"></button-delete>
+                        <button-update></button-update>
+                    </div>
+                </td>
+            </tr>
         }
     </tbody>
 </table>

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, ViewChild} from '@angular/core';
+import {Component, ElementRef, EventEmitter, Input, Output, ViewChild} from '@angular/core';
 import {MatDatepicker} from "@angular/material/datepicker";
 
 @Component({
@@ -31,9 +31,15 @@ export class InputElementComponent {
     @Output()
     dataChange = new EventEmitter<any>();
 
+    @ViewChild('inputElement') inputElement!: ElementRef;
+
     updateData(event: KeyboardEvent) {
         let element = event.target as HTMLInputElement;
         console.log(element.value)
         this.dataChange.emit(element.value);
+    }
+
+    focusInput(): void {
+        this.inputElement.nativeElement.focus();
     }
 }

@@ -8,7 +8,6 @@
         <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[4] }}</th>
         <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[5] }}</th>
         <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[6] }}</th>
-        <th class="p-2 font-semibold text-slate-800 text-left text-sm w-fit">{{ colName[7] }}</th>
     </tr>
     </thead>
     <tbody>
@@ -36,9 +35,11 @@
                     <app-cell [(text)]="product.category"></app-cell>
                 </td>
 
-                <td class="flex justify-around items-center">
-                    <button-delete (click)="delete($index, product)"></button-delete>
-                    <button-update (click)="saveChanges($index, product)"></button-update>
+                <td class="border">
+                    <div class="flex justify-around items-center w-full">
+                        <button-delete (click)="delete($index, product)"></button-delete>
+                        <button-update (click)="saveChanges($index, product)"></button-update>
+                    </div>
                 </td>
             </tr>
         }

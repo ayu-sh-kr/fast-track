@@ -22,11 +22,21 @@ export class ShipmentTableBodyComponent {
 
     shipments: Shipment[] = [
         {
-            shipmentId: 'SID12032024',
+            shipmentId: 'SID12032024001',
             shipmentStatus: ShipmentStatus.PROCESSING,
             destination: 'Varanasi',
             origin: 'Jaunpur',
             productId: 'PIDH001',
+            dispatchDate: new Date().getTime(),
+            deliveryTime: -1
+        },
+
+        {
+            shipmentId: 'SID12032024002',
+            shipmentStatus: ShipmentStatus.PROCESSING,
+            destination: 'Varanasi',
+            origin: 'Jaunpur',
+            productId: 'PIDH002',
             dispatchDate: new Date().getTime(),
             deliveryTime: -1
         }
